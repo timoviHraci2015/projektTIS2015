@@ -1,0 +1,415 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* basic elements */
+
+html {
+	overflow: -moz-scrollbars-vertical;
+	overflow: scroll;
+}
+
+
+BODY {	
+	background-image: url('images/bg_2013.png');
+	background-color: #ffffff;
+	background-position: center top; 
+	background-repeat: no-repeat;
+	margin: auto;
+	margin-top: 0px;
+	padding: 0px;			
+	/*margin: 0px;
+	padding: 30px;
+	padding-top: 200px;*/
+	font-size: 70%;
+	font-size: 13px;
+	color: #000;	
+	line-height: 140%;
+	/*Font-size: 10pt;
+	Font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;	*/	
+}
+
+.body_bg {
+	background: url('images/bg_bottom_2013.png') center bottom repeat-x;
+	margin: auto;
+	padding-top: 80px;
+}
+
+
+/*.body_bg_left_column {
+	background: url('images/bg_left_column.png') top left no-repeat;
+}
+.body_bg_right_column {
+	background: url('images/bg_right_column.png') top right no-repeat;
+}
+*/
+
+body, td, input, button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+
+
+a {
+	color: #0095c5;
+	/*font-size: 13px;*/
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+A:link {
+	color: #0095c5;
+}
+A:visited {
+	color: #0089b0;
+}
+A:hover, A:active {
+	color: #00aeef;
+}
+
+H1, H2, H3 {
+	font-weight: bold;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+H1 {	
+	/*border-bottom-color : rgb(28,187,220);
+	border-bottom-style : solid;
+	border-bottom-width : 0;
+	width : 80%;
+	font-size : 2em;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;*/
+}
+
+H2 {
+	/*border-bottom-color : rgb(28,187,220);
+	border-bottom-style : solid;
+	border-bottom-width : thin;
+	width : 65%;
+	color: White;
+	font-size : 1.5em;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : normal;*/
+}
+
+H3 {
+	/*width : 50%;
+	font-size : 1.2em;
+	font-style : normal;
+	font-variant : normal;
+	font-weight : bold;
+	color : rgb(28,187,220);*/
+	
+}
+
+.nadpis {
+	margin-bottom: -20px;
+	font-size: 13pt;
+	font-weight : bold;
+}
+/*FOOTER*/
+.footer {
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+hr#footer {
+	Width: 200px;
+	Size: 2px;
+}
+.highlight_label {
+	color: #004f62;
+	font-size: 15px;
+	/*color: #e68d00;*/
+	/*color: #0089b0;*/
+	/*color: #FF0000;*/
+}
+
+.highlight_text {
+	color: #f99800;
+	/*color: #ffba00;*/
+	/*color: #ffff00;*/
+}
+
+.date_text {
+	color: #c0c0c0;
+	font-size : 0.8em;
+}
+
+
+ul {
+	list-style-image:url('images/bullet_circle.png');
+}
+
+ul ul {
+	list-style-image:url('images/bullet_triangle.png');
+}
+
+.lang {
+	position: absolute;
+	margin: auto;
+	width: 529px;
+	text-align: right;
+	margin-top: 60px;
+}
+.menu {
+	position: relative;
+	margin: auto;
+	text-align: center;
+	width: 546px;
+	display: block;
+}
+
+.advert {
+	position: relative;
+	float: right;
+	margin-right: 100px;
+	top: 92px;
+	text-align: center;
+	display: block;
+}
+
+.summary {
+	position: absolute;
+	margin: auto;
+	top: 59px;
+	text-align: center;
+	display: block;
+}
+
+.menu_button_bg {
+}
+.menu_list {
+	margin: 0px;
+	padding: 0px;
+}
+.menu_list li {
+	list-style: none;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+}
+.menu_list li a {
+	background: url('images/menu_button_combined.png') center top repeat-x;
+	width: 78px;
+	height: 118px;
+	/*height: 221px;*/
+	display: block;
+	text-align: center;
+	padding-top: 103px;
+	color: #005362 /*#555;*/
+}
+.menu_list li a:hover, .menu_list li a.current {
+	background: url('images/menu_button_combined.png') center bottom repeat-x;
+	color: #0092c4;
+}
+.menu_list li a.current {
+	/*color: #000000;*/
+}
+
+
+/* ######### Pravy stlpec / Right column ######### */
+
+#rightcolumn{
+/*        position: absolute;*/
+        overflow: hidden;
+        right: 0px;
+        top: 20px;     
+	width:  170px;                  
+	float: right;
+	background: transparent;	
+	padding: 20px;
+}
+
+
+#rightcolumn .blocklook b{
+display: block;
+background: black url("images/rightgradient2.gif") top left repeat-x;
+border-bottom: 1px solid black;
+padding-left: 5px;
+}
+
+#rightcolumn .blocklook b{
+display: block;
+background: black url("images/rightgradient2.gif") top left repeat-x;
+border-bottom: 1px solid black;
+padding-left: 5px;
+}
+
+#rightcolumn .sponsor_label {
+	color:#555;
+	/*font-weight: bold;*/
+	text-align: center;
+}
+
+/* ######### Stredny stlpec / Right column ######### */
+
+#content {
+	position: relative;
+	width:550px;
+	min-height:1200px;
+	margin: auto;
+	margin-top: 250px;
+	}
+
+.change {
+         color: red;
+        }
+		
+		
+		
+HR {
+	color:#ffdf69;	
+	border: 1px solid #e9d376;
+	border-bottom: 1px solid #dcc872;
+	height: 2px;
+}
+
+
+table.form {
+	border: 0;
+}
+
+td{
+	vertical-align: top;
+}
+table.form_logme {
+	border: 0;
+	margin: auto;
+}
+td.input {
+	width: 140px;
+}
+
+td.input_lm {
+	width: 80px;
+}
+
+.err_input{
+	background: #FA8072;
+}
+td.title {
+	width: 140px;
+	vertical-align: top;
+	font-weight: bold;
+}
+td.reddot{
+	color: red;
+	vertical-align: top;	
+}
+td.notice {
+	color: red;
+	vertical-align: top;
+}
+
+td.title_lm {
+	width: 60px;
+	vertical-align: top;
+	font-weight: bold;
+}
+
+pre {
+	font-weight: bold;
+	 font-family: Arial,Helvetica,sans-serif;
+     font-size: 13px;
+	 margin-top: 0px;
+}
+
+
+.slidingDiv {
+    height:1270px;
+    background-color: #99CCFF;
+    padding:20px;
+    margin-top:10px;
+    border-bottom:5px solid #3399FF;
+}
+ 
+.show_hide {
+    display:none;
+}
+
+/*CSS FOR LIST - SKLAD KECUPU*/
+
+table.list3 {
+  table-layout: fixed;
+  border: 1px solid #000;
+  border-collapse: collapse;
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+ .list3 td{
+  text-align: left; 
+  vertical-align: middle; 
+  border: 1px solid #000;
+  border-collapse: collapse;
+ }
+
+ .list3 th{
+  text-align: center; 
+  vertical-align: middle; 
+  border: 2px solid #000;
+  border-collapse: collapse;
+}
+
+ th.num{
+  width: 50px;
+  height: 50px;	
+  text-align: center; 
+  vertical-align: middle; 
+  border: 2px solid #000;
+  border-collapse: collapse;
+}
+
+ th.vertical {
+	height: 200px;
+	width: 50px;
+	min-width: 50px;
+	max-width: 50px;
+	margin: auto;
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	bottom: 0;
+	white-space: nowrap;
+}
+
+ th.horizontal {
+	width: 200px;
+	height: 50px;
+	text-align: center; 
+	vertical-align: middle; 
+}
+
+ td.horizontal {
+	width: 200px;
+	height: 50px;
+	text-align: center; 
+	vertical-align: middle; 
+}
+
+ td.num {
+	width: 50px;
+	height: 50px;
+	text-align: center; 
+	vertical-align: middle; 
+}
+
+ td.shadow {
+	width: 50px;
+	height: 50px;
+	background-color: grey;
+	text-align: center; 
+	vertical-align: middle; 
+}
+
+td.sum {
+	width: 50px;
+	height: 50px;
+	background-color: #0099FF;
+	text-align: center; 
+	vertical-align: middle; 
+}

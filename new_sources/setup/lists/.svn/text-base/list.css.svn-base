@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+html {
+	overflow: -moz-scrollbars-vertical;
+	overflow: scroll;
+}
+
+body, td, input, button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+.heading {
+	width: 1000px;
+	text-align: center;
+	margin: auto;
+}
+
+a {
+	color: #0095c5;
+	/*font-size: 13px;*/
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+A:link {
+	color: #0095c5;
+}
+A:visited {
+	color: #0089b0;
+}
+A:hover, A:active {
+	color: #00aeef;
+}
+
+H1, H2, H3 {
+	font-weight: bold;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+table.data {
+  table-layout: fixed;	
+  width: 100%;
+  border: 1px solid #000;
+  border-collapse: collapse;
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+table.list3 {
+  table-layout: fixed;
+  border: 1px solid #000;
+  border-collapse: collapse;
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+table.signat {
+  table-layout: fixed;	
+  width: 80%;
+  border: none;
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+table.signatL3 {
+  table-layout: fixed;	
+  width: 53%;
+  border: none;
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+.signat td{
+  text-align: left; 
+  vertical-align: middle; 
+  border: none;
+  border-collapse: collapse;
+}
+
+.signatL3 td{
+  text-align: left; 
+  vertical-align: middle; 
+  border: none;
+  border-collapse: collapse;
+}
+
+ td{
+  text-align: left; 
+  vertical-align: middle; 
+  border: 1px solid #000;
+  border-collapse: collapse;
+ }
+
+ th{
+  text-align: center; 
+  vertical-align: middle; 
+  border: 2px solid #000;
+  border-collapse: collapse;
+}
+
+ th.num{
+  width: 50px;
+  height: 50px;	
+  text-align: center; 
+  vertical-align: middle; 
+  border: 2px solid #000;
+  border-collapse: collapse;
+}
+
+ th.mutal {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+ th.end {
+	width: 70px;
+}
+
+ th.vertical {
+	height: 200px;
+	width: 50px;
+	min-width: 50px;
+	max-width: 50px;
+	margin: auto;
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	bottom: 0;
+	white-space: nowrap;
+}
+
+ th.horizontal {
+	width: 200px;
+	height: 50px;
+	text-align: center; 
+	vertical-align: middle; 
+}
+
+ td.horizontal {
+	width: 200px;
+	height: 50px;
+	text-align: center; 
+	vertical-align: middle; 
+}
+
+ td.num {
+	width: 50px;
+	height: 50px;
+	text-align: center; 
+	vertical-align: middle; 
+}
+
+ td.shadow {
+	width: 50px;
+	height: 50px;
+	background-color: grey;
+	text-align: center; 
+	vertical-align: middle; 
+}
+
+ th.times {
+	font-size: 14px;
+	font-weight: normal;
+	width: 50px;
+}
+
+caption {
+  padding: 0.3em;
+}
+

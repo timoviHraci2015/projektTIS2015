@@ -132,7 +132,7 @@
 		while ($robot = mysql_fetch_object($sql2)) {
 				$message = $message."".$robot->name.", ";
 		}
-		if ($user->age == 0) {$age = "nezadany";} else {$age = $user->age;}
+		if ($user->age == 0) {$age = "nezadaný";} else {$age = $user->age;}
 		$message = $message."<br/><b>Autor:</b> ".$user->name_surname."
 		<br/><b>Vek: </b>".$age."
 		<br/><b>Praca: </b>".$user->job."

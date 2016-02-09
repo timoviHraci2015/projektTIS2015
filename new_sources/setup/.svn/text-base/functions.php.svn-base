@@ -1,0 +1,111 @@
+<?php
+	function openMySQL($host, $user, $pass, $db) {
+		$link = mysql_connect($host, $user, $pass) or die("Nejde sa pripojit k MySQL: " . mysql_error());
+		$dbsel = mysql_select_db($db, $link) or die("Nejde vybrat databazu: ". mysql_error());
+		mysql_query("SET CHARACTER SET utf8");
+		mysql_query("SET character_set_client=utf8");
+		mysql_query("SET character_set_connection=utf8");
+	}
+	
+	function check_mail($email) {
+			if (preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/',$email)) {
+				return true;
+				echo "JE SPRAVNY";
+			} else {
+				return false;
+			}
+		}
+		
+	//skontroluje ci zadany email uz neni registrovany
+	function check_exist_user($id) {
+			$sql = mysql_query("select * from author where email = '".$id."'") or die ("TOTO:".mysql_error());
+				if (mysql_num_rows($sql) == 0) {
+					return true;
+				}else {
+					return false;		
+				}	
+			}
+	
+	function random_num() {
+			$length = 6;
+			$characters = "0123456789";
+			$string = "";    
+
+			for ($p = 0; $p < $length; $p++) {
+				$string .= $characters[mt_rand(0, strlen($characters))];
+			}
+			
+			$length = 6-strlen($string);
+			
+			if ($length == 0) return $string;
+			else {
+				for ($i=1; $i<=$length; $i++) $string .= $characters[mt_rand(0, strlen($characters))];
+				return $string;
+			}
+		}
+
+	
+	function redir($url) {
+		echo "<script type=\"text/javascript\">
+								<!--
+									window.location = \"".$url."\"
+								//-->
+								</script>";
+	}
+
+	
+	function isnum($x) {
+		if (preg_match('/^[0-9]*$/',$x)) return true;
+		return false;
+	}
+	
+	function isLogged() {
+		if (isset($_SESSION['user_id']) && isset($_SESSION['password']) && isset($_SESSION['login'])) {
+			$sql = @mysql_query("select user_id from users where email = '".$_SESSION['login']."' and password = '".$_SESSION['password']."'");
+			if (mysql_num_rows($sql) > 0) return true;
+			else return false;
+		} else {
+			return false;
+		}
+	}
+	
+	function isnum_age($x) {
+		if (preg_match('/^[0-9]*$/',$x) && (strlen($x)<3)) return true;
+		return false;
+	}
+	
+	function activate_hash($login, $pass, $time) {
+		return md5($login.$pass.$time);
+	}
+	
+	function sendmail($to, $hash, $id, $pass) {
+		$from = "info@robotika.sk";
+		$subject = "Aktivačný email súťaže Istrobot";
+
+		//begin of HTML message
+		$message = "<html><body>
+		Vas prihlasovaci mail je <b><u>".$id."</u></b><br />
+		Vase heslo je <b><u>".$pass."</u></b><br />
+		Kliknite na link alebo ho skopirujte a vlozte do URL adresy vasho prehliadaca.
+        <a href=\"http://robotika.sk/contest/2013/activate.php?hash=".$hash."\">http://robotika.sk/contest/2013/activate.php?hash=".$hash."</a>
+
+		<br /><br /><hr />
+		ISTROBOT
+		</body>
+		</html>";
+		//end of message
+
+		// To send the HTML mail we need to set the Content-type header.
+		$headers = "MIME-Version: 1.0\r\n";
+		$headers .= "Content-type: text/html; charset=utf-8\r\n";
+		$headers  .= "From: $from\r\n";
+    
+		mail($to, $subject, $message, $headers);	
+	}
+	
+	function secure($x) {
+		$arr = array("<", ">", "#", "/", "\"", "--", ";", "<!--");
+		$x = nl2br(str_replace($arr, "", $x));
+		return addslashes($x);
+	}
+?>

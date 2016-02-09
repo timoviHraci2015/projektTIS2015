@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/40/old_src/istrobot/istrobot/captcha
+END
+cryptographp.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/40/old_src/istrobot/istrobot/captcha/cryptographp.php
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/40/old_src/istrobot/istrobot/captcha/index.php
+END
+cryptographp.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/40/old_src/istrobot/istrobot/captcha/cryptographp.inc.php
+END
+verifier.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/40/old_src/istrobot/istrobot/captcha/verifier.php
+END
+cryptographp.fct.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/40/old_src/istrobot/istrobot/captcha/cryptographp.fct.php
+END
+cryptographp.cfg.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/40/old_src/istrobot/istrobot/captcha/cryptographp.cfg.php
+END
