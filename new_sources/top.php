@@ -84,6 +84,12 @@
 							} else {
 								echo "<li><a class=\"menu_button\" href=\"index.php?page=robots\">Roboty</a></li>";
 							}
+							// results
+							if ($_GET['page'] == "results") {
+								echo "<li><a class=\"menu_button current\" href=\"index.php?page=results\">Výsledky</a></li>";
+							} else {
+								echo "<li><a class=\"menu_button\" href=\"index.php?page=results\">Výsledky</a></li>";
+							}
 							//poradna
 							if ($_GET['page'] == "advice") {
 								echo "<li><a class=\"menu_button current\" href=\"index.php?page=advice\">Poradňa</a></li>";
